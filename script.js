@@ -3,7 +3,7 @@ function convertStrPixelsValueToFloat(pixels_val)
     if (/^[0-9]+(\.[0-9]+)?\s*px$/.test(pixels_val))
         return Number.parseFloat(pixels_val.replace(/\s*px/, ""));
     else
-        throw new TypeError("Ce paramètre n'est pas une valeur en pixels.");
+        throw new Error("Ce paramètre n'est pas une valeur en pixels.");
 }
 
 function getHeightElement(element, layout = 0)
